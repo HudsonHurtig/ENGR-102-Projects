@@ -57,10 +57,21 @@ def locateBody(body, time):
     bodyY = body.vY * time + body.initY
     bodyZ = body.vZ * time + body.initZ
     
+    print("At time",time,"seconds:") 
+    print("x1 =",bodyX,"m")
+    print("y1 =",bodyY,"m")
+    print("z1 =",bodyZ,"m")
+    print("-----------------------")
+    
     return Point(bodyX, bodyY, bodyZ, time)
 
-
-      
+def interpolateRange(pts, t1, t2, body):
+    
+    for i in range(0, pts):
+        locateBody(body, (((t2-t1)/(pts-1))*i)+t1)
+    
+    
+    
 
 # point 1
 
@@ -78,12 +89,30 @@ body = interpolatePoints(givenPoint1, givenPoint2)
 
 #locates moving body at time
 
-point3 = locateBody(body, 30.0)
 
-print("At time",point3.time,"seconds:") 
-print("x1 =",point3.x,"m")
-print("y1 =",point3.y,"m")
-print("z1 =",point3.z,"m")
+
+startingTime = 12
+
+endingTime = 85
+
+numberOfPoints = 5
+
+
+locateBody(body, 30)
+
+interpolateRange(numberOfPoints, startingTime, endingTime, body)
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
