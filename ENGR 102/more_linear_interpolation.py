@@ -18,6 +18,7 @@ class Point:
         self.time = time
         
         self.arr = [x,y,z,time]
+        
    
     
 class movingBody:
@@ -32,9 +33,10 @@ class movingBody:
         self.initY = initY
         self.initZ = initZ
         
-        self.velocityArray = [vX,vY,vZ]         
+        self.velocityArray = [vX,vY,vZ]    
+             
 
-
+#returns object moving body so we can extract data from that object
 def interpolatePoints(a, b):
     
     tdiff = b.time - a.time
@@ -47,10 +49,10 @@ def interpolatePoints(a, b):
     initY = a.y - vY * a.time
     initZ = a.z - vZ * a.time 
     
-    print(initX)
     return movingBody(vX, vY, vZ, initX, initY, initZ)
 
 
+#read the code ...
 def locateBody(body, time):
     
     bodyX = body.vX * time + body.initX
@@ -58,17 +60,41 @@ def locateBody(body, time):
     bodyZ = body.vZ * time + body.initZ
     
     print("At time",time,"seconds:") 
-    print("x1 =",bodyX,"m")
-    print("y1 =",bodyY,"m")
-    print("z1 =",bodyZ,"m")
+    print("x =",bodyX,"m")
+    print("y =",bodyY,"m")
+    print("z =",bodyZ,"m")
     print("-----------------------")
+    
+    
+#only difference is the number of repetitions is passed as a parameter so we can put that in the text so xzybooks doesnt freak.  
+def locateBodyRep(body, time, Rep):
+    
+    bodyX = body.vX * time + body.initX
+    bodyY = body.vY * time + body.initY
+    bodyZ = body.vZ * time + body.initZ
+    
+    
+    print("At time",time,"seconds:") 
+    print("x{} =".format(Rep),bodyX,"m")
+    print("y{} =".format(Rep),bodyY,"m")
+    print("z{} =".format(Rep),bodyZ,"m")
     
     return Point(bodyX, bodyY, bodyZ, time)
 
+
+
 def interpolateRange(pts, t1, t2, body):
     
+    #run it points ammount of times
     for i in range(0, pts):
-        locateBody(body, (((t2-t1)/(pts-1))*i)+t1)
+        
+        #silly formatting conditional
+        if i > 0:
+            print("-----------------------")
+                            #the formula looks dense but its basically just the times subtracted by eachother divided by the number of points we want minus one all times nth itteration
+                            #simply put it will increment the time that is input to the function locate body
+        locateBodyRep(body, (((t2-t1)/(pts-1))*i)+t1, i+1)
+        
     
     
     
