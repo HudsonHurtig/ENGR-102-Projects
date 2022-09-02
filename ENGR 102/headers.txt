@@ -4,10 +4,10 @@
 #   "Aggies do not lie, cheat, or steal, or tolerate those who do."
 #   "I have not given or received any unauthorized aid on this assignment."
 #
-# Name:         YOUR NAME
-# Section:      YOUR SECTION NUMBER
-# Assignment:   THE ASSIGNMENT NUMBER (e.g. Lab 1b-2)
-# Date:         DAY MONTH YEAR
+# Name:         Hudson
+# Section:      506
+# Assignment:   Lab topic 2 individual
+# Date:         9/2/22
 
 #Team header:
 

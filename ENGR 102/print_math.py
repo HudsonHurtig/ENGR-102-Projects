@@ -16,13 +16,28 @@ import math
 
 
 #this next chunk prints both text and math!
-v1 = 3 * 5.5
+mass = 3
+acceleration = 5.5
 
-v2 = 2 * .025 * math.sin(25 * (math.pi/180))
+v1 = mass * acceleration
 
-v3 = 2.8927755932067996
+distance = .025
+theta = 25
 
-v4 = 69.00619999999999
+v2 = 2 * distance * math.sin(theta * (math.pi/180))
+
+
+grams = 5
+days = 3
+halfLife=3.8
+v3 = grams * pow(2, -(days/halfLife))
+
+
+moles = 5
+temp = 415
+idealConstant = 8.314
+Vol = .25
+v4 = ((moles*temp*idealConstant)/Vol)/1000
 
 print("Force is", v1 ,"N")
 print("Wavelength is", v2 ,"nm")
