@@ -87,18 +87,14 @@ givenPoint2 = Point(-5,30,9,85)
 
 body = interpolatePoints(givenPoint1, givenPoint2)
 
-#locates moving body at time
 
+#locates moving body throughout a range of times including the inital and ending times
 
+startingTime = 30
 
-startingTime = 12
-
-endingTime = 85
+endingTime = 60
 
 numberOfPoints = 5
-
-
-locateBody(body, 30)
 
 interpolateRange(numberOfPoints, startingTime, endingTime, body)
 
