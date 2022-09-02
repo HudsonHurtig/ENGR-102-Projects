@@ -96,7 +96,9 @@ def interpolateRange(pts, t1, t2, body):
         locateBodyRep(body, (((t2-t1)/(pts-1))*i)+t1, i+1)
         
     
-    
+
+
+#meat and potatoes below
     
 
 # point 1
