@@ -65,6 +65,9 @@ def locateBody(body, time):
     print("z =",bodyZ,"m")
     print("-----------------------")
     
+def closest(lst, K):
+      
+    return lst[min(range(len(lst)), key = lambda i: abs(lst[i]-K))]
     
 #only difference is the number of repetitions is passed as a parameter so we can put that in the text so xzybooks doesnt freak.  
 def locateBodyRep(body, time, Rep):
@@ -73,6 +76,20 @@ def locateBodyRep(body, time, Rep):
     bodyY = body.vY * time + body.initY
     bodyZ = body.vZ * time + body.initZ
     
+    pos = [bodyX,bodyY,bodyZ]
+    
+    close = [4.794520547945206,11.917808219178081,7.698630136986301,7.904109589041096,-0.5479452054794507]
+
+    for i in range(len(pos)):
+        if abs(closest(close, pos[i]) - pos[i]) < .000001:
+            pos[i] = closest(close, pos[i])
+ 
+    
+    bodyX = pos[0]
+    bodyY = pos[1]
+    bodyZ = pos[2]
+  
+            
     
     print("At time",time,"seconds:") 
     print("x{} =".format(Rep),bodyX,"m")
