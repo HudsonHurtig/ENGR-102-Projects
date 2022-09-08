@@ -19,6 +19,16 @@ class Point:
         
         self.arr = [x,y,z,time]
         
+    def make_point(n):
+        
+        t = int(input("Enter time {}:".format(n)))
+        
+        x = int(input("Enter the x position of the object at time {}:".format(t)))
+        y = int(input("Enter the y position of the object at time {}:".format(t)))
+        z = int(input("Enter the z position of the object at time {}:".format(t)))
+        
+        return Point(x,y,z,t)
+        
    
     
 class movingBody:
@@ -100,6 +110,8 @@ def locateBodyRep(body, time, Rep):
 
 
 
+
+
 def interpolateRange(pts, t1, t2, body):
     
     #run it points ammount of times
@@ -113,6 +125,44 @@ def interpolateRange(pts, t1, t2, body):
         locateBodyRep(body, (((t2-t1)/(pts-1))*i)+t1, i+1)
         
     
+    
+    
+    
+
+def locateBodyRep2(body, time):
+    
+    bodyX = body.vX * time + body.initX
+    bodyY = body.vY * time + body.initY
+    bodyZ = body.vZ * time + body.initZ
+    
+    pos = [bodyX,bodyY,bodyZ]
+    
+    # close = [4.794520547945206,11.917808219178081,7.698630136986301,7.904109589041096,-0.5479452054794507]
+
+    # for i in range(len(pos)):
+    #     if abs(closest(close, pos[i]) - pos[i]) < .000001:
+    #         pos[i] = closest(close, pos[i])
+ 
+    
+    # bodyX = pos[0]
+    # bodyY = pos[1]
+    # bodyZ = pos[2]
+  
+    print("At time",time,f"seconds the object is at({bodyX:.3f},{bodyY:.3f},{bodyZ:.3f})") 
+    
+    
+    return Point(bodyX, bodyY, bodyZ, time)
+
+
+
+
+def interpolateRange2(pts, t1, t2, body):
+    
+    for i in range(0, pts):
+                            #the formula looks dense but its basically just the times subtracted by eachother divided by the number of points we want minus one all times nth itteration
+                            #simply put it will increment the time that is input to the function locate body
+        locateBodyRep2(body, (((t2-t1)/(pts-1))*i)+t1)
+    
 
 
 #meat and potatoes below
@@ -120,13 +170,14 @@ def interpolateRange(pts, t1, t2, body):
 
 # point 1
 
-givenPoint1 = Point(8,6,7,12)
+givenPoint1 = Point.make_point(1)
 
 
 # point 2
 
-givenPoint2 = Point(-5,30,9,85)
+givenPoint2 = Point.make_point(2)
 
+print("")
 
 # creates a moving body through point interpolation
 
@@ -135,13 +186,13 @@ body = interpolatePoints(givenPoint1, givenPoint2)
 
 #locates moving body throughout a range of times including the inital and ending times
 
-startingTime = 30
+startingTime = 1
 
-endingTime = 60
+endingTime = 2
 
 numberOfPoints = 5
 
-interpolateRange(numberOfPoints, startingTime, endingTime, body)
+interpolateRange2(numberOfPoints, startingTime, endingTime, body)
 
 
 
