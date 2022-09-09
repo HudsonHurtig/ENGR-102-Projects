@@ -5,7 +5,7 @@
 #   "I have not given or received any unauthorized aid on this assignment."
 #
 # Name:         Hudson
-# Section:      506
+# Section:      575
 # Assignment:   Lab topic 2 individual
 # Date:         9/2/22
 
@@ -20,6 +20,6 @@
 #               Brian Tran
 #               MJ Murray
 #               Gabriel Isaac
-# Section:      505
+# Section:      575
 # Assignment:   Lab #
 # Date:         9-2-2022
