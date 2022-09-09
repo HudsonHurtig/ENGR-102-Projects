@@ -7,7 +7,7 @@
 # Assignment:   Lab topic 2 individual
 # Date:         9/8/22
 
-
+# silly comment
 from math import *
 
 
@@ -18,12 +18,13 @@ stringTxt = '2.71828182845904523536028747135266249775724709369995'
 
 def digs(num):
     
-    lastVal = stringTxt[num+2]
-    #print(stringTxt[0:num+1])
+    lastVal = stringTxt[num]
+    # print(stringTxt[0:num+1])
+    # print(lastVal)
     if int(lastVal) > 4:
         
         
-        output = stringTxt[0:num-1] + str(int(stringTxt[num]) + 1)
+        output = stringTxt[0:num-1] + str(int(stringTxt[num]))
         
     else:
         
