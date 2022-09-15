@@ -1,24 +1,32 @@
+import math
+
 payment = int(input("How much did you pay? "))
 cost = float(input("How much did it cost? "))
 change = payment-cost
 
-def how_many_of(c, val):
-    return int((val - (val%c)) / c)
-def remaineder_of(c, val):
-    return (val%c)
+print(math.exp(2))
+                  
 print(f"You received ${change} in change. That is...")
 
-print(how_many_of(.25, change), "quarters")
-change = remaineder_of(.25, change)
+numQuarters = int((change-(change%.25))/.25)
+print(numQuarters, "quarters")
+change = round(change - (numQuarters * .25), 3)
 print(change)
-print(how_many_of(.1, change), "nickels")
-change = remaineder_of(.1, change)
+
+numNickels = int((change-(change%.1))/.1)
+print(numNickels, "nickels")
+change = change - (numNickels * .1)
 print(change)
-print(how_many_of(.05, change), "dimes")
-change = remaineder_of(.05, change)
+
+numDimes = int((change-(change%.1))/.1)
+print(numDimes, "dimes")
+change = change - (numDimes * .1)
 print(change)
-print(how_many_of(.01, change), "pennies")
-change = remaineder_of(.01, change)
+
+numPennies = int((change-(change%.1))/.1)
+print(numPennies, "pennies")
+change = change - (numPennies * .1)
 print(change)
+
 
 
