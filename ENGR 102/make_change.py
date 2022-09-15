@@ -4,29 +4,36 @@ payment = int(input("How much did you pay? "))
 cost = float(input("How much did it cost? "))
 change = payment-cost
 
-print(math.exp(2))
                   
 print(f"You received ${change} in change. That is...")
 
 numQuarters = int((change-(change%.25))/.25)
-print(numQuarters, "quarters")
-change = round(change - (numQuarters * .25), 3)
-print(change)
+
+change = round(change - (numQuarters * .25), 4)
+if numQuarters != 0:
+    print(numQuarters, "quarters")
+#print(change)
 
 numNickels = int((change-(change%.1))/.1)
-print(numNickels, "nickels")
+
 change = change - (numNickels * .1)
-print(change)
+if numNickels != 0:
+    print(numNickels, "nickels")
 
-numDimes = int((change-(change%.1))/.1)
-print(numDimes, "dimes")
-change = change - (numDimes * .1)
-print(change)
+#print(change)
 
-numPennies = int((change-(change%.1))/.1)
-print(numPennies, "pennies")
-change = change - (numPennies * .1)
-print(change)
+numDimes = int((change-(change%.05))/.05)
+
+change = change - (numDimes * .05)
+if numDimes != 0:
+    print(numDimes, "dimes")
+#print(change)
+
+numPennies = int((change/.01))
+
+if numPennies != 0:
+    print(numPennies, "pennies")
+
 
 
 
