@@ -33,4 +33,29 @@ print(f'y = x * x * 3 = {y}')
 z = x * 3 * x     
 print(f'z = x * 3 * x = {z}')
 
+TOL = 1e-10 
+
+if abs(y - z) < TOL: 
+    
+    print(f'y and z are equal within tolerance of {TOL}') 
+    
+else:                 
+    
+    print(f'y and z are NOT equal within tolerance of {TOL}') 
+
 # no it is not 1
+
+############ Part B ############
+
+TOL = 1e-10 
+
+if abs(b - f) < TOL: 
+    
+    print(f'b and f are equal within tolerance of {TOL}') 
+    
+else:                 
+    
+    print(f'b and f are NOT equal within tolerance of {TOL}') 
+    
+
+    
