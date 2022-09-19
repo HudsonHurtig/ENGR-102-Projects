@@ -20,7 +20,10 @@ try:
         elif days >= 61 and days <= 101:
             
             out = int(2550 + ((49+(110-days))/2)*(days-60))
-        print(f"The total number of gadge ts produced on day {days} is {out}")
+        else:
+            out = 3730
+        print(f"The total number of gadgets produced on day {days} is {out}")
+        
     else:
         print("You entered an invalid number!")
 
