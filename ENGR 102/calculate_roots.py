@@ -22,20 +22,27 @@ discriminate = b * b - 4 * a * c
 
 sqrAbs = math.sqrt(abs(discriminate)) 
 
-if discriminate > 0: 
-    r1 = (-b + sqrAbs)/(2 * a)
-    r2 = (-b - sqrAbs)/(2 * a)
-    if r1 == r2:
-        print(f"The root is x = {r1}")
-    else:
-        print(f"The root is x = {r1} and x = {r2}")
+if a == b and a == 0:
+    print("You entered an invalid combination of coefficients!")
 else:
-    r1 = str(-b/(2*a))+" + i"+str(sqrAbs)
-    r2 = str(-b/(2*a))+" - i"+str(sqrAbs)
-    if r1 == r2:
-        print(f"The root is x = {r1}")
+    if discriminate >= 0:
+        if a == 0:
+            r1 = -c/b
+            r2 = -c/b
+        else:
+            r1 = (-b + sqrAbs)/(2 * a)
+            r2 = (-b - sqrAbs)/(2 * a)
+        if int(r1) == int(r2):
+            print(f"The root is x = {r1}")
+        else:
+            print(f"The roots are x = {r1} and x = {r2}")
     else:
-        print(f"The root is x = {r1} and x = {r2}")
-    
-      
+        r1 = str(-b/(2*a))+" + "+str(.5*sqrAbs)+"i"
+        r2 = str(-b/(2*a))+" - "+str(.5*sqrAbs)+"i"
+        if r1 == r2:
+            print(f"The root is x = {r1}")
+        else:
+            print(f"The roots are x = {r1} and x = {r2}")
+        
+        
 
