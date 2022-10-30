@@ -11,19 +11,42 @@
 
 import math
 
-def parta(r,a):
-    h = r - math.sqrt(r ** 2 - a ** 2)
-    volcap = math.pi / 3 * (h ** 2) * (3 * r - h)
-    return volcap
+def parta(rs, rh):
+    #comment
+    return 4/3 * math.pi * (rs**2 - rh**2)**1.5
 
-
-# def partb(n):
+#style comment
+def partb(n):
+    
+    c = getConsec(n)
+    s = -1 
+    #comment
+    
+    for i in range(len(c)):
+        if c[i] + c[min(i+1, len(c)-1)] == n:
+            return [c[i], c[i+1]]
+        elif c[i] + c[min(i+1, len(c)-1)] + c[min(i+2, len(c)-1)] == n:
+            return [c[i], c[i+1], c[i+2]]
+        
+    return False
+            
     
     
+        
+            
+        
+        
     
+def getConsec(n):
+    nums = [1, 3]
+    #comment
+    while nums[-1]+2 < n:
+        nums.append(nums[-1] + 2)
+    
+    return nums    
             
 def partc(*params):
-    
+    #comment
     length = max([len(i) for i in params]) + 4
     
     
@@ -31,19 +54,33 @@ def partc(*params):
     return params[0] * (length+2) + '\n' + params[0] + params[1].center(length, " ") + params[0] + '\n' + params[0] + params[2].center(length, " ") + params[0] + '\n' + params[0] + params[3].center(length, " ") + params[0] + '\n' + params[0] * (length+2) + '\n'
   
 def partd(l):
-    
-    return [min(l), sum(l)/len(l), max(l)]
-
-print(parta(2, 1))
- 
-print(partc('*', 'Dr. Ritchey', 'Texas A&M University', 
-'snritchey@tamu.edu'))
-
-print(partd([0,1,2]))
+    #comment
+    return (min(l), int(sum(l)/len(l)), max(l))
 
 
-    
-    
+
+def parte(l1,l2):
+    #comment
+    return [((l2[i] - l2[i+1])/(l1[i] - l1[i+1]))  for i in range(len(l1)-1)]
+            
+
+
+
+
+def partf(l1):
+    #comment
+    for i in l1:
+        
+        l1.pop(l1.index(i))
+        
+        for q in l1:
+            
+            if i + q == 2026:
+                
+                return i * q
+            
+        l1.append(i)
+        
+    return False
             
     
-
