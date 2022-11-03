@@ -12,7 +12,10 @@ ul = 0
 hl = 0
 sl = 0
 
-
+vh = 0
+uh = 0
+hh = 0
+sh = 0
 
 def interpolate(x1, y1, x2, y2, x):
     '''This function interpolates between two points'''
