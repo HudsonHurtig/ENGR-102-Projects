@@ -21,7 +21,10 @@ def validateBarcode(string):
    
    return int(string[12]) == num6
 
-with open("barcodes.txt") as file:
+
+in1 = input("Enter the name of the file:")
+
+with open(in1) as file:
     counter = 0
     bigString = file.read()
     bigList = bigString.split("\n")
@@ -31,13 +34,13 @@ with open("barcodes.txt") as file:
         if validateBarcode(i):
             
             counter+=1
-            f = open("validbarcodes.txt", "a")
+            f = open("valid_barcodes.txt", "a")
             f.write(i+"\n")
             f.close()
         
-        print(i, validateBarcode(i))
+        #print(i, validateBarcode(i))
         
-    print(counter)
+    print(" There are",counter,"valid barcodes")
     
     
 
