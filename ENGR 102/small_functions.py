@@ -75,7 +75,7 @@ def partf(l1):
         
         for q in l1:
             
-            if i + q == 2026:
+            if i + q == 2026: # comment
                 
                 return i * q
             
