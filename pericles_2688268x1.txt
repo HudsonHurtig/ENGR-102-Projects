@@ -1,0 +1,28 @@
+
+TY  - JOUR
+AU  - Kusumoputro, Sydney
+AU  - Tseng, Shannon
+AU  - Tse, Jonathan
+AU  - Au, Christian
+AU  - Lau, Candice
+AU  - Wang, Xiang
+AU  - Xia, Tian
+C7  - 20200105
+TI  - Potential nanoparticle applications for prevention, diagnosis, and treatment of COVID-19
+JO  - VIEW
+JA  - View
+VL  - 1
+IS  - 4
+SN  - 2688-268X
+UR  - https://doi.org/10.1002/VIW.20200105
+DO  - https://doi.org/10.1002/VIW.20200105
+SP  - 20200105
+KW  - COVID-19
+KW  - cytokine storm
+KW  - diagnosis
+KW  - nanoparticles
+KW  - PPE
+KW  - sterilization
+PY  - 2020
+AB  - Abstract The coronavirus disease 2019 (COVID-19) pandemic caused by the novel severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) poses an unprecedented challenge to establish effective methods of prevention and treatment. Nanotechnology has shown excellent potential in its ability to fight a variety of healthcare problems due to nanomaterials? unique physicochemical properties and controlled nano-bio interactions. Expanding their application to a wide-range of upstream and downstream approaches is necessary to fight COVID-19. At different stages of this virus-caused disease, nanotechnology could offer promising solutions, including a way to combat the large number of fatalities caused by a late-stage cytokine storm. This mini-review provides an overview of the recent studies regarding nanoparticles? applications in vaccines, personal protective equipment, sterilization of contaminated environments, diagnostic testing, and cytokine reduction treatment in combating COVID-19.
+ER  - 
