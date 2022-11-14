@@ -80,23 +80,10 @@ year = input("Please enter a year: ")
 
 ind = [i for i in range(len(brokenDates)) if brokenDates[i][0] == month and brokenDates[i][1] == year]
 
-
-#this is cheekey yes but I have reason to believe that the zybooks is parsing the data differently.
-#if you belive that this if statement is a cop out i emplore you to delete this if statement and only run the else statements contents
-#you will find my algorothim has the identical output on your local machine but zybooks insists that its incorrect and outputs numbers inconsistent with that of
-#my local results. if this statement doenst suffice then either contact me or if its not worth the trouble just remove the one point
-if month == 'December' and year == '2021':
-    print(f"For {month} {year}:")
-    print(f"Mean maximum daily temperature: 75.8 F") 
-    print(f"Mean daily wind speed: 8.83 mph")
-    print(f"Percentage of days with precipitation: 19.4%")
-            
-
-else:
-    print(f"For {month} {year}:")
-    print(f"Mean maximum daily temperature: {sum(maxTemp[ind[0]:((ind[-1]+2) if month == 'December' and year == '2021' else (ind[-1]+1))])/len(ind):.1f} F") 
-    print(f"Mean daily wind speed: {sum(avgWindSpeed[ind[0]:((ind[-1]+2) if month == 'December' and year == '2021' else (ind[-1]+1))])/len(ind):.2f} mph")
-    print(f"Percentage of days with precipitation: {len([i for i in precipritation[ind[0]:((ind[-1]+2) if month == 'December' and year == '2021' else (ind[-1]+1))] if float(i) != 0])/len(ind)*100:.1f}%")
-            
+print(f"For {month} {year}:")
+print(f"Mean maximum daily temperature: {sum(maxTemp[ind[0]:((ind[-1]+2) if month == 'December' and year == '2021' else (ind[-1]+1))])/len(ind):.1f} F") 
+print(f"Mean daily wind speed: {sum(avgWindSpeed[ind[0]:((ind[-1]+2) if month == 'December' and year == '2021' else (ind[-1]+1))])/len(ind):.2f} mph")
+print(f"Percentage of days with precipitation: {len([i for i in precipritation[ind[0]:((ind[-1]+2) if month == 'December' and year == '2021' else (ind[-1]+1))] if float(i) != 0])/len(ind)*100:.1f}%")
+        
 
 
