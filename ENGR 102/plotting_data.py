@@ -15,9 +15,7 @@ import numpy as np
 from matplotlib import pyplot as plt
 data  = []
 with open("WeatherDataCLL.csv") as file:
-    plt.title("max temp(g) / average wind speed(r) VS Days in File") 
-    plt.xlabel("days") 
-    plt.ylabel("max temp / average wind speed") 
+   
     counter = 0
     bigString = file.read()
     bigList = bigString.split("\n")
@@ -30,12 +28,33 @@ with open("WeatherDataCLL.csv") as file:
     data = biggerList
         
         # print(i,len(biggerList[i]))
-    plt.plot(range(len(biggerList)),[i[1] for i in biggerList])
-    plt.plot(range(len(biggerList)),[i[4] for i in biggerList])
+    
+    
+    fig, ax1 = plt.subplots()
+
+    color = 'tab:red'
+    ax1.set_xlabel('days in data set')
+    ax1.set_ylabel('AVG daily wind speed', color=color)
+   
+    a = plt.plot(range(len(biggerList)),[i[1] for i in biggerList], color=color)
+    ax1.tick_params(axis='y', labelcolor=color)
+    
+    
+
+    ax2 = ax1.twinx()  # instantiate a second axes that shares the same x-axis
+
+    color = 'tab:blue'
+    ax2.set_ylabel('MAX daily temp', color=color)  # we already handled the x-label with ax1
+
+    b = plt.plot(range(len(biggerList)),[i[4] for i in biggerList], color=color)
+    ax2.tick_params(axis='y', labelcolor=color)
+
+    fig.tight_layout()  # otherwise the right y-label is slightly clipped
+    plt.legend(["AVG daily wind speed"])
+    plt.show()
         
         
-print(biggerList[0])
-plt.show()
+
         
 plt.title("max temp(g) / average wind speed(r) VS Days in File") 
 plt.xlabel("inches of rain") 
@@ -51,7 +70,7 @@ plt.xlabel("AVG wind speed")
 plt.ylabel("tempurature") 
 
 for i in range(len(data)):
-    plt.plot(data[i][1],data[i][-1],"bo")
+    plt.plot(data[i][-1],data[i][1],"bo")
 
 plt.show()
 
@@ -80,8 +99,17 @@ Ddat = [i[3] for i in data if i[0] == 12]
 plt.title("Box plot for avg temp") 
 plt.xlabel("month") 
 plt.ylabel("tempurature") 
+dat = [Jdat,Fdat,Mdat,Adat,Madat,Judat,Juldat,Audat,Sdat,Odat,Ndat,Ddat]
 
-plt.boxplot([Jdat,Fdat,Mdat,Adat,Madat,Judat,Juldat,Audat,Sdat,Odat,Ndat,Ddat])
+avg = [sum(i)/len(i) for i in dat]
+maxx = [max(i) for i in dat]
+minn = [min(i) for i in dat]
+
+plt.bar(range(1,13),avg)
+plt.plot(range(1,13),maxx,"r")
+plt.plot(range(1,13),minn,"b")
+
+plt.legend(['Max','Min'])
 
 plt.show()
 
