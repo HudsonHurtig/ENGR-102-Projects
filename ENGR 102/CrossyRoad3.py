@@ -4,7 +4,32 @@ ob1Dir = 0
 ob2Dir = 0
 ob3Dir = 0
 
+def Up():
+    y = turtle.ycor()
+    y += 50
+    turtle.sety(y)
+    print("got it")
 
+def Down():
+    y = turtle.ycor()
+    y += -50
+    turtle.sety(y)
+    print("got it")
+
+def Right():
+    x = turtle.xcor()
+    x += 50
+    turtle.setx(x)
+    print("got it")
+    
+
+def Left():
+    x = turtle.xcor()
+    x-=50
+    turtle.setx(x)
+    print("got it")
+
+ 
 
 
 def remake(ob):
@@ -22,7 +47,8 @@ def remake2(charac):
     charac.begin_fill() 
     charac.circle(20)  
     charac.end_fill()         
-
+    
+    
 
 
 screen = turtle.Screen() 
@@ -107,8 +133,7 @@ def updateCircles():
     obsticle3.forward(ob3Dir)
     
     
-    turtle.clear()
-    remake2(turtle)
+    
     
     
     
@@ -116,31 +141,6 @@ def updateCircles():
     
 # infinite loop
 
-def Up():
-    """moves t up"""
-    y = turtle.ycor()
-    y += 50
-    turtle.sety(y)
-
-def Down():
-	"""t d"""
-	y = turtle.ycor()
-	y += -50
-	turtle.sety(y)
-
-def Right():
-	"""t r"""
-	x = turtle.xcor()
-	x += 50
-	turtle.setx(x)
-
-def Left():
-	"""t l"""
-	x = turtle.xcor()
-	x += -50
-	turtle.setx(x)
- 
- 
   
 turtle = turtle.Turtle()
 
@@ -150,13 +150,19 @@ turtle.goto(-0, -250)
 
 
 
-screen.listen()
-    
+screen.onkey(Down(), "Down")    
+
 screen.onkey(Left(), "Left")
 screen.onkey(Up(), "Up")
 screen.onkey(Right(), "Right")
-screen.onkey(Down(), "Down")
+
+screen.listen()
 
 while True :
-
+    
+    
+ 
+    
     updateCircles()
+    turtle.clear()
+    remake2(turtle)
