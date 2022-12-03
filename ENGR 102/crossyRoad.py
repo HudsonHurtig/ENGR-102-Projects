@@ -49,6 +49,8 @@ def updateVisual():
             print(density[i], end='')
         print("\n")
     
+    
+    
 def advance(t,l,c):
     
     global gameFrame
@@ -58,6 +60,7 @@ def advance(t,l,c):
     if c:
         newB[0] = [3 * int(1 + 2*math.sin(i/5)) for i in range(len(newB[0]))]
         newD[0] = [1,2,1]
+        
     newB.append(gameFrame[0])
     newB.append(gameFrame[1])
     newB.append(gameFrame[2])
@@ -69,11 +72,7 @@ def advance(t,l,c):
     newD.append(gameFrameDat[3])
     
     gameFrame = newB
-    gameFrameDat = newD
-         
-         
-         
-           
+    gameFrameDat = newD      
                 
 
 chickenLocation(4, 80)
