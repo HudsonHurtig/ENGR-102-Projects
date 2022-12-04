@@ -30,6 +30,9 @@ gameFrame = [[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
              [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
              [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
              [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+             [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+             [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+             [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
              [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]]
 
 def setChickenLocation(newX,newY):
@@ -48,11 +51,12 @@ def setChickenLocation(newX,newY):
 
     
 def showBoard():
+    """prints out board"""
     for i in gameFrame:
         print(i)
 
 def loose():
-    
+    """checks for loss"""
     global chickenX, chickenY
     
     if gameFrame[chickenY][chickenX+1] > 0 or gameFrame[chickenY][chickenX-1] > 0:
@@ -62,12 +66,17 @@ def loose():
 
 def win():
     
+    """checks for win"""
+    
     if chickenY == 0:
         return True
     else:
         return False
 
 def updateVisual():
+    
+    """this updates the screen for crossy road for animation"""
+    
     
     global ticker, increment
     ticker += increment
@@ -76,6 +85,10 @@ def updateVisual():
     gameFrame[1] = [3 * int(1 + 2*math.sin(i/5 + ticker)) for i in range(len(gameFrame[1]))]
     gameFrame[2] = [2 * int(1 + 2*math.sin(i/10 - ticker)) for i in range(len(gameFrame[1]))]
     gameFrame[3] = [3 * int(1 + 2*math.sin(i/6 + ticker)) for i in range(len(gameFrame[1]))]
+    gameFrame[4] = [2 * int(1 + 2.3*math.sin(i/5 - ticker)) for i in range(len(gameFrame[1]))]
+    gameFrame[5] = [3 * int(1 + 2*math.sin(i/6 + ticker)) for i in range(len(gameFrame[1]))]
+    gameFrame[6] = [2 * int(1 + 3*math.sin(i/10 - ticker)) for i in range(len(gameFrame[1]))]
+    
     setChickenLocation(0, 0)
     
     for q in gameFrame: 
@@ -84,8 +97,24 @@ def updateVisual():
         print("\n")
    
    
+ 
+ 
+INSTRUCTION_DELAY = 3
+print("WELCOME TO CROSSEY ROAD. ITS LIKE FROGGER BUT YOU'RE A CHICKEN LOL")
+time.sleep(INSTRUCTION_DELAY)
+print("PLEASE ADJUST YOUR CONSOLE SCREEN TO BE THE MAX WIDTH AND HEIGHT")
+time.sleep(INSTRUCTION_DELAY)
+print("YOUR 'CHICKEN' IS SIMPLY AN @ SIGN. \n BLANK SPACE IS SAFE SPACE\n ANY OTHER CHARACTER IS A 'CAR' OR 'LOG' OF SORTS")
+time.sleep(INSTRUCTION_DELAY)
+print("USE THE ARROWS ON THE KEYBOARD TO CONTROL THE CHICKEN AND GET IT TO THE OTHER SIDE OF THE ROAD")
+time.sleep(INSTRUCTION_DELAY)
+
+
+ 
+ 
+ 
    
-setChickenLocation(80, 4)
+setChickenLocation(80, 7)
 
 
      
@@ -133,6 +162,6 @@ if loose():
     
 elif win():
         
-    print("why did the chicken cross the road? to win! congradulations")
+    print("why did the chicken cross the road? to win! congradulations!")
     
     time.sleep(5)
