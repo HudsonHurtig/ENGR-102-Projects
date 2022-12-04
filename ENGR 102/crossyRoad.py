@@ -53,7 +53,7 @@ def updateVisual():
     
 def advance(t,l,c):
     
-    global gameFrame
+    global gameFrame, gameFrameDat
     newB = [[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]]
     newD = [[0,1,1]]
                 
@@ -80,6 +80,8 @@ chickenLocation(4, 80)
 for w in range(10):
     
     updateVisual()
-    advance(False,False,True)
+    #advance(False,False,True)
+    
+    
     time.sleep(1)
     os.system('cls')
